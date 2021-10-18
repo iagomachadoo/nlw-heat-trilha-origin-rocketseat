@@ -1,0 +1,16 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-items: center;/*place-items é uma propriedade de alinhamento de itens, nesse caso, os itens estão sendo alinhados no centro da página*/
+}
+
+h1{
+  font-size: 1.5rem;
+}
+
+a{
+  text-decoration: none;
+}
