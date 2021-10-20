@@ -1,16 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --gray: rgba(225, 225, 230, 1);
+  --black: rgba(32, 32, 36, 1);
+  ;
+
+}
+
 html, body{
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body{
   display: grid;
-  place-items: center;/*place-items é uma propriedade de alinhamento de itens, nesse caso, os itens estão sendo alinhados no centro da página*/
+  place-items: center;/*place-items é uma propriedade de alinhamento de itens, nesse caso, os itens estão sendo alinhados no centro da página e só é liberado quando se usa o display grid*/
 }
+
+main{
+  width: 375px;
+  height: 812px;
+  background-image: url(/nlw/img/backgroun.png);
+  color: var(--gray);
+  ;
+}
+
+.container{
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.avatar{
+  width: 10rem;/*a unidade de medida rem é relativa ao tamanho da fonte, que nesse caso é 16px, logo 10rem = 160px*/
+  margin: 11.5rem auto 0;/*top = 11.5rem = 184px; right e left = auto e botton = 0*/
+  position: relative;/*agora esse elemento é o limite para o position absolute do span dentro d div avatar*/
+}
+
+.avatar span{
+  position: absolute;/*está criando níveis de empilhamento de elementos*/
+  top: -15px;/*deslocando o elemento para cima*/
+  z-index: 1;/*a propriedae z-index trata do posicionamento do eixo z que é o de profundidade*/
+}
+
+.avatar > img{
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;/*essa propriedade faz com que a imagem se adpate as medidas de largura e altura*/
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);/*essa propiedade vai criar uma forma de polígono. Para chegar a essas medidas doi usada o site https://bennettfeely.com/clippy/*/
+
+}/*pegando a imagem de primeiro nível dentro da div avatar, a imagem que está dentro do span é de segundo nível, porque ela está dentro de outra tag*/
 
 h1{
   font-size: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 a{
   text-decoration: none;
+  margin-top: .25rem;
+  color: var(--gray);
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  align-items: center;/*da propriedade display ate align-items estão centralizando o ícone do github com o nome de usuário na mesmo eixo, porque antes de aplicar essas propriedades, o ícone do github estva um pouco acima do eixo no nome de usuário*/
+}
+
+p{
+  margin-top: 2rem;
+}
+
+ul{
+  margin-top: 4rem;
+  list-style: none;
+  display: flex;
+  gap: .5rem;/*gap é uma propriedade de espaçamento entre elementos liberada quando se usa o display flex*/
+  justify-content: center;
 }
