@@ -25,7 +25,7 @@ body{
 main{
   width: 375px;
   height: 812px;
-  background-image: url(/nlw/img/backgroun.png);
+  background-image: url(/img/backgroun.png);
   color: var(--gray);
   ;
 }
