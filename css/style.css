@@ -23,9 +23,10 @@ body{
 }
 
 main{
-  width: 375px;
-  height: 812px;
-  background-image: url(../img/backgroun.png);
+  width: 100vw;
+  height: 100vh;
+  min-height: 812px;
+  background: url(../img/backgroun.png) no-repeat center/cover;/*a imagem de fundo não vai se repetir, está alinhada no centro e vai cobrir todo o fundo*/
   color: var(--gray);
   
 }
